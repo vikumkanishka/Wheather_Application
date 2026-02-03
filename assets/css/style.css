@@ -1,49 +1,211 @@
 @font-face {
-    font-family: "headding_font";
-    src: url(/assets/font/RetroDream-DisplayFreeDemo.ttf);
+    font-family: Gutter_Rust_Italic;
+    src: url("/assets/fonts/Gutter_Rust_Italic.otf");
 }
 
-.main_headder_div {
-    /* display: flex; */
+body{
+    background-image: url(/assets/img/back_2.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.body_left{
+    display: flex;
+    width: 40%;
+    height: 30%;
+    background-color: #343a401f;
+    backdrop-filter: blur(10px);
+}
+
+
+.main_header_div {
+    /* background-color: #212529; */
+    display: flex;
     align-items: center;
-    /* height: 20%; */
-    background-color: #0e6ba8;
-
+    /* justify-content: space-between; */
 }
 
-.headding_left_side {
+.header_left_side {
     display: flex;
     align-items: center;
     width: 50%;
 }
 
-.headding_left_side img {
+.header_left_side img {
+    width: 20%;
     height: 10%;
-    width: 30%;
 }
 
-.logo {
+.header_left_side label{
+    font-size: 40px;
+    font-family: Gutter_Rust_Italic;
+    color: #dee2e6;
+}
 
+.page_logo_div {}
+
+.header_right_side {
     width: 50%;
-    height: 20%;
-}
-.logo label{
-
-    font-family: headding_font;
-    font-weight: bold;
-    font-size: 190%;
-}
-
-.headding_right_side {
+    height: 15%;
     display: flex;
-    align-items: center;
     justify-content: right;
+    align-content: center;
+}
+
+.header_right_side input{
+    cursor: text;
+    border-radius: 0.2rem;
+    margin-right: 25px;
+    border: none;
+    outline: none;
+    background-color: #352d2d25;
+    backdrop-filter: blur(10);
+    color: #343a40;
+    font-size: 20px;
+    border-bottom: 1px #54525200 solid;
+}
+
+.display_box {
+    display: flex;
+    border-radius: 10rem;
+    width: 200%;
+}
+
+.weather_status_image_box {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 10%; */
+}
+
+.weather_details {
+    width: 100%;
+    display: block;
+    margin-left: 5%;
+}
+
+.weather_details span {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+#city_name,
+#country_name,
+#sub_main_temparature,
+#temparature_feel_like,
+#status,
+#date,
+#sun_rise_time,
+#sun_set_time {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #E5E5E5;
+}
+#city_name {
+    font-size: 22px;
+    /* color: #bdbecb; */
+}
+
+#country_name {
+    font-size: 20px;
+}
+
+#main_temparature {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #E5E5E5;
+}
+
+#sub_main_temparature,
+#temparature_feel_like {
+    font-size: 15px;
+}
+
+#status {
+    font-size: 28px;
+    font-weight: 450;
+}
+
+#date {
+    font-size: 19px;
+}
+
+.sun_rise_box,
+.sun_set_box {
+    
+    border-radius: 0.2rem;
+    justify-items: center;
     width: 50%;
 }
 
-.headding_right_side input {
-    background-color: rgb(204, 204, 204);
-    cursor: text;
-    border-radius: 0.5rem;
-    margin-right: 25px;
+.sun_rise_box span,
+.sun_set_box span {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 25px;
+    cursor: context-menu;
+    color: #E5E5E5;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#sun_rise_time,
+#sun_set_time {
+    font-size: 20px;
+    color: #E5E5E5;
+}
+
+.wind_speed_box,
+.humidity_box,
+.cloud_cover_box,
+.uv_index_box,
+.pressure_box,
+.visibility_box {
+    text-align: center;
+    /* background-color: aquamarine; */
+    margin: 1px;
+}
+
+.hr {
+    width: 55%;
+    color: #F1F7FB;
+    align-self: center;
+    margin: auto;
+}
+
+.other_details {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.other_details label {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 2%;
+    color: #E5E5E5;
+}
+
+#wind_speed_value,
+#humidity_value,
+#cloud_cover_value,
+#uv_index_value,
+#pressure_value,
+#visibility_value {
+    font-weight: 350;
+    font-size: 23px;
+    color: #E5E5E5;
+}
+.srss{
+   display: block; 
+   align-content: center;
+   align-items: center;
+   width: 150%;
 }
