@@ -1,49 +1,106 @@
 @font-face {
-    font-family: "headding_font";
-    src: url(/assets/font/RetroDream-DisplayFreeDemo.ttf);
+    font-family: Gutter_Rust_Italic;
+    src: url("/assets/fonts/Gutter_Rust_Italic.otf");
 }
 
-.main_headder_div {
-    /* display: flex; */
+body{
+    background-image: url(/assets/img/back_2.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.body_left{
+    display: flex;
+    width: 40%;
+    height: 30%;
+    background-color: #343a401f;
+    backdrop-filter: blur(10px);
+}
+
+
+.main_header_div {
+    /* background-color: #212529; */
+    display: flex;
     align-items: center;
-    /* height: 20%; */
-    background-color: #0e6ba8;
-
+    /* justify-content: space-between; */
 }
 
-.headding_left_side {
+.header_left_side {
     display: flex;
     align-items: center;
     width: 50%;
 }
 
-.headding_left_side img {
+.header_left_side img {
+    width: 20%;
     height: 10%;
-    width: 30%;
 }
 
-.logo {
+.header_left_side label{
+    font-size: 40px;
+    font-family: Gutter_Rust_Italic;
+    color: #dee2e6;
+}
 
+.page_logo_div {}
+
+.header_right_side {
     width: 50%;
-    height: 20%;
-}
-.logo label{
-
-    font-family: headding_font;
-    font-weight: bold;
-    font-size: 190%;
-}
-
-.headding_right_side {
+    height: 15%;
     display: flex;
-    align-items: center;
     justify-content: right;
-    width: 50%;
+    align-content: center;
 }
 
-.headding_right_side input {
-    background-color: rgb(204, 204, 204);
+.header_right_side input{
     cursor: text;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     margin-right: 25px;
+    border: none;
+    outline: none;
+    background-color: #352d2d25;
+    backdrop-filter: blur(10);
+    color: #343a40;
+    font-size: 20px;
+    border-bottom: 1px #54525200 solid;
+}
+
+.display_box {
+    display: flex;
+    border-radius: 10rem;
+    width: 200%;
+}
+
+.weather_status_image_box {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 10%; */
+}
+
+.weather_details {
+    width: 100%;
+    display: block;
+    margin-left: 5%;
+}
+
+.weather_details span {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+#city_name,
+#country_name,
+#sub_main_temparature,
+#temparature_feel_like,
+#status,
+#date,
+#sun_rise_time,
+#sun_set_time {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #E5E5E5;
 }
