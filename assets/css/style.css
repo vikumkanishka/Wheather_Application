@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "headding_font";
+    src: url(/assets/font/RetroDream-DisplayFreeDemo.ttf);
+}
+
+.main_headder_div {
+    /* display: flex; */
+    align-items: center;
+    /* height: 20%; */
+    background-color: #0e6ba8;
+
+}
+
+.headding_left_side {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.headding_left_side img {
+    height: 10%;
+    width: 30%;
+}
+
+.logo {
+
+    width: 50%;
+    height: 20%;
+}
+.logo label{
+
+    font-family: headding_font;
+    font-weight: bold;
+    font-size: 190%;
+}
+
+.headding_right_side {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50%;
+}
+
+.headding_right_side input {
+    background-color: rgb(204, 204, 204);
+    cursor: text;
+    border-radius: 0.5rem;
+    margin-right: 25px;
+}
