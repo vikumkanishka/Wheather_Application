@@ -66,4 +66,8 @@ let main_temparature = document.getElementById("main_temparature");
     let uv_index_value = document.getElementById("uv_index_value");
     let pressure_value = document.getElementById("pressure_value");
     let visibility_value = document.getElementById("visibility_value");
+
+    // Sun times (Note: current.json doesn't provide sunrise/sunset, would need forecast API)
+    let sun_rise_time = document.getElementById("sun_rise_time");
+    let sun_set_time = document.getElementById("sun_set_time");
 }
