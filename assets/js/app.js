@@ -70,4 +70,8 @@ let main_temparature = document.getElementById("main_temparature");
     // Sun times (Note: current.json doesn't provide sunrise/sunset, would need forecast API)
     let sun_rise_time = document.getElementById("sun_rise_time");
     let sun_set_time = document.getElementById("sun_set_time");
+
+    // Set location data
+    city.innerText = data.location.name;
+    country.innerText = data.location.country;
 }
