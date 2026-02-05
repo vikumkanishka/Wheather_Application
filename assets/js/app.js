@@ -74,4 +74,13 @@ let main_temparature = document.getElementById("main_temparature");
     // Set location data
     city.innerText = data.location.name;
     country.innerText = data.location.country;
+
+    // Set temperature data
+    main_temparature.innerHTML = Math.round(data.current.temp_c) + ' <span>℃</span>';
+    sub_main_temparature.innerHTML = Math.round(data.current.temp_c) + ' <span>℃</span>';
+    temparature_feel_like.innerHTML = Math.round(data.current.feelslike_c) + ' <span>℃</span>';
+
+    // Set weather status
+    status.innerText = data.current.condition.text;
+    main_status_image.src = data.current.condition.icon;
 }
