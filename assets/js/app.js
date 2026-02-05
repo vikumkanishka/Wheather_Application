@@ -83,4 +83,23 @@ let main_temparature = document.getElementById("main_temparature");
     // Set weather status
     status.innerText = data.current.condition.text;
     main_status_image.src = data.current.condition.icon;
+
+    // Set date
+    let localTime = new Date(data.location.localtime);
+    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    date.innerText = localTime.toLocaleDateString('en-US', options);
+
+    
+    // UV Index with descriptive text
+    let uvIndex = data.current.uv;
+    let uvDescription;
+    if (uvIndex <= 2) uvDescription = "Low";
+    else if (uvIndex <= 5) uvDescription = "Moderate";
+    else if (uvIndex <= 7) uvDescription = "High";
+    else if (uvIndex <= 10) uvDescription = "Very High";
+    else uvDescription = "Extreme";
+    uv_index_value.innerText = uvIndex + ' (' + uvDescription + ')';
+
+    pressure_value.innerHTML = data.current.pressure_mb + ' <span>hPa</span>';
+    visibility_value.innerHTML = data.current.vis_km + ' <span>km</span>';
 }
