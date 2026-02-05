@@ -45,3 +45,8 @@ let apiCall = async (city) => {
         alert("Failed to fetch weather data. Please try again.");
     }
 }
+
+let setWeather = (data) =>{
+    let city = document.getElementById("city_name");
+    let country = document.getElementById("country_name");
+}
