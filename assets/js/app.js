@@ -102,4 +102,10 @@ let main_temparature = document.getElementById("main_temparature");
 
     pressure_value.innerHTML = data.current.pressure_mb + ' <span>hPa</span>';
     visibility_value.innerHTML = data.current.vis_km + ' <span>km</span>';
+
+    sun_rise_time.innerText = "N/A";
+    sun_set_time.innerText = "N/A";
 }
+window.addEventListener('load', () => {
+    apiCall('Colombo');
+});
