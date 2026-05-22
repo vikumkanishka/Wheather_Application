@@ -13,106 +13,104 @@
         <div class="row align-items-center justify-content-between px-md-5">
            <div class="col-md-auto">
              <div class="page_logo_div d-flex align-items-center">
-                <img src="assets/img/weather forecast logo.png" alt="weather_logo" style="width: 50px; height: auto;" class="me-3">
-                <label style="font-size: 30px; font-family: Gutter_Rust_Italic; color: #fff; margin: 0;">Weather Forecast</label>
+                <img src="assets/img/weather forecast logo.png" alt="weather_logo" style="width: 40px; height: auto;" class="me-3">
+                <label style="font-size: 24px; font-family: Gutter_Rust_Italic; color: #fff; margin: 0;">Weather Forecast</label>
              </div>
            </div>
            <div class="col-md-4 mt-3 mt-md-0">
-            <input type="text" placeholder="Search City..." id="txt_city" class="form-control" style="background: rgba(255,255,255,0.2); border: none; border-radius: 20px; color: white; padding: 10px 20px; backdrop-filter: blur(5px); outline: none;">
+            <input type="text" placeholder="Search City..." id="txt_city" class="form-control" style="background: rgba(255,255,255,0.2); border: none; border-radius: 20px; color: white; padding: 8px 15px; font-size: 0.9rem; backdrop-filter: blur(5px); outline: none;">
            </div> 
         </div>
     </header>
     
     <!-- Main Weather Section -->
-    <main class="container py-5">
-        <div class="row g-4 justify-content-center">
-            <!-- Main Card -->
-            <div class="col-lg-5">
-                <div class="glass-card main_weather text-center h-100">
-                    <div class="weather_status_image_box mb-4">
-                        <img id="main_status_image" src="assets/img/Sunny.png" alt="Weather Status" style="width: 150px; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));">
+    <main class="container py-4">
+        <div class="glass-card main-container p-4 mx-auto" style="max-width: 900px;">
+            <div class="row g-4 align-items-center">
+                <!-- Left Side: City and Temp -->
+                <div class="col-md-5 text-center border-end border-white border-opacity-10">
+                    <div class="weather_status_image_box mb-3">
+                        <img id="main_status_image" src="assets/img/Sunny.png" alt="Weather Status" style="width: 120px; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));">
                     </div>
                     
                     <div class="weather_details">
-                        <div class="location-box d-flex align-items-center justify-content-center gap-2 mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="location-box d-flex align-items-center justify-content-center gap-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
-                            <span id="city_name" style="font-size: 2.5rem; font-weight: 600;">Colombo</span>
+                            <span id="city_name">Colombo</span>
                         </div>
-                        <div id="country_name" style="font-size: 1.2rem; opacity: 0.8;">Sri Lanka</div>
+                        <div id="country_name">Sri Lanka</div>
 
-                        <div class="temperature d-flex justify-content-center align-items-center my-4">
-                            <span id="main_temparature" style="font-size: 5rem; font-weight: 600;">35<span>℃</span></span>
-                            <div class="ms-3 text-start" style="font-size: 1.1rem; opacity: 0.9;">
+                        <div class="temperature d-flex justify-content-center align-items-center my-3">
+                            <span id="main_temparature">35<span>℃</span></span>
+                            <div class="ms-3 text-start temp-min-max" style="opacity: 0.9;">
                                 <div>Max: <span id="sub_main_temparature">35<span>℃</span></span></div>
                                 <div>Feels: <span id="temparature_feel_like">21<span>℃</span></span></div>
                             </div>
                         </div>
 
-                        <div id="status" style="font-size: 2rem; font-weight: 500;" class="mb-1">Sunny</div>
-                        <div id="date" style="opacity: 0.8;">Monday, September 31, 2024</div>
+                        <div id="status" class="mb-1">Sunny</div>
+                        <div id="date">Monday, September 31, 2024</div>
                     </div>
 
-                    <div class="sun-times d-flex justify-content-around mt-5 pt-4 border-top border-white border-opacity-10">
+                    <div class="sun-times d-flex justify-content-around mt-4 pt-3 border-top border-white border-opacity-10">
                         <div class="sun-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 2v8" /><path d="m4.93 10.93 1.41 1.41" /><path d="M2 18h2" /><path d="M20 18h2" /><path d="m19.07 10.93-1.41 1.41" /><path d="M22 22H2" /><path d="m8 6 4-4 4 4" /><path d="M16 18a4 4 0 0 0-8 0" />
                             </svg>
-                            <span class="d-block mt-2 small fw-bold">Sunrise</span>
-                            <div id="sun_rise_time">05:59 AM</div>
+                            <span class="d-block mt-1 small fw-bold">Sunrise</span>
+                            <div id="sun_rise_time" class="small">05:59 AM</div>
                         </div>
                         <div class="sun-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 10V2" /><path d="m4.93 10.93 1.41 1.41" /><path d="M2 18h2" /><path d="M20 18h2" /><path d="m19.07 10.93-1.41 1.41" /><path d="M22 22H2" /><path d="m16 6-4 4-4-4" /><path d="M16 18a4 4 0 0 0-8 0" />
                             </svg>
-                            <span class="d-block mt-2 small fw-bold">Sunset</span>
-                            <div id="sun_set_time">06:03 PM</div>
+                            <span class="d-block mt-1 small fw-bold">Sunset</span>
+                            <div id="sun_set_time" class="small">06:03 PM</div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Details Grid -->
-            <div class="col-lg-7">
-                <div class="glass-card h-100 p-4">
-                    <h4 class="mb-4 text-center opacity-75 text-uppercase" style="letter-spacing: 2px; font-size: 1.2rem;">Detailed Forecast</h4>
+                <!-- Right Side: Detailed Forecast -->
+                <div class="col-md-7">
+                    <h4 class="mb-3 text-center opacity-75 text-uppercase" style="letter-spacing: 2px; font-size: 1rem;">Detailed Forecast</h4>
                     <div class="other_details_grid">
                         <div class="detail-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" /><path d="M9.6 4.6A2 2 0 1 1 11 8H2" /><path d="M12.6 19.4A2 2 0 1 0 14 16H2" /></svg>
-                            <label>Wind Speed</label>
-                            <div id="wind_speed_value" class="fs-4 fw-medium">7<span> km/h</span></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" /><path d="M9.6 4.6A2 2 0 1 1 11 8H2" /><path d="M12.6 19.4A2 2 0 1 0 14 16H2" /></svg>
+                            <label class="small">Wind Speed</label>
+                            <div id="wind_speed_value" class="fs-5 fw-medium">7<span> km/h</span></div>
                         </div>
 
                         <div class="detail-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" /><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" /></svg>
-                            <label>Humidity</label>
-                            <div id="humidity_value" class="fs-4 fw-medium">34<span>%</span></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" /><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" /></svg>
+                            <label class="small">Humidity</label>
+                            <div id="humidity_value" class="fs-5 fw-medium">34<span>%</span></div>
                         </div>
 
                         <div class="detail-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /><path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5" /></svg>
-                            <label>Cloud Cover</label>
-                            <div id="cloud_cover_value" class="fs-4 fw-medium">67<span>%</span></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /><path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5" /></svg>
+                            <label class="small">Cloud Cover</label>
+                            <div id="cloud_cover_value" class="fs-5 fw-medium">67<span>%</span></div>
                         </div>
 
                         <div class="detail-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 4h.01" /><path d="M20 12h.01" /><path d="M12 20h.01" /><path d="M4 12h.01" /><path d="M17.657 6.343h.01" /><path d="M17.657 17.657h.01" /><path d="M6.343 17.657h.01" /><path d="M6.343 6.343h.01" /></svg>
-                            <label>UV Index</label>
-                            <div id="uv_index_value" class="fs-4 fw-medium">0 (Low)</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 4h.01" /><path d="M20 12h.01" /><path d="M12 20h.01" /><path d="M4 12h.01" /><path d="M17.657 6.343h.01" /><path d="M17.657 17.657h.01" /><path d="M6.343 17.657h.01" /><path d="M6.343 6.343h.01" /></svg>
+                            <label class="small">UV Index</label>
+                            <div id="uv_index_value" class="fs-5 fw-medium">0 (Low)</div>
                         </div>
 
                         <div class="detail-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>
-                            <label>Pressure</label>
-                            <div id="pressure_value" class="fs-4 fw-medium">1012<span> hPa</span></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>
+                            <label class="small">Pressure</label>
+                            <div id="pressure_value" class="fs-5 fw-medium">1012<span> hPa</span></div>
                         </div>
 
                         <div class="detail-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></svg>
-                            <label>Visibility</label>
-                            <div id="visibility_value" class="fs-4 fw-medium">10<span> km</span></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a2ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></svg>
+                            <label class="small">Visibility</label>
+                            <div id="visibility_value" class="fs-5 fw-medium">10<span> km</span></div>
                         </div>
                     </div>
                 </div>
