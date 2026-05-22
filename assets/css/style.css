@@ -79,32 +79,32 @@ body {
 
 #main_status_image {
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-    width: 180px;
+    width: 120px;
     height: auto;
 }
 
 .weather_details {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 #city_name {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
 #country_name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0.8;
 }
 
 .temperature {
-    margin: 1.5rem 0;
-    align-items: baseline;
+    margin: 1rem 0;
+    align-items: center;
     gap: 10px;
 }
 
 #main_temparature {
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 600;
 }
 
@@ -112,16 +112,16 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 #status {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 #date {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     opacity: 0.8;
 }
 
@@ -146,14 +146,14 @@ body {
 
 .other_details_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 .detail-box {
     background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 15px;
+    padding: 0.8rem;
+    border-radius: 12px;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -165,13 +165,13 @@ body {
 
 .detail-box label {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.7;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .detail-box div {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
